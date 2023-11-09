@@ -1,0 +1,148 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: space-between;
+    background-color: #88A3A9;
+    margin-top:3%;
+    padding: 0;
+    background-image: url('wallpaper.png'); /* Replace with the path to your image */
+    background-repeat: repeat; 
+}
+
+.grid-container2 {
+    display: grid;
+    grid-gap: 3%;
+    grid-template-columns: 2;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-content: space-evenly;
+    justify-items: center;
+    grid-template-areas:
+    "poison-book . frame"
+    ".  .";
+}
+
+/* Posion book Page */
+.grid-nav {
+    grid-area: grid-nav;
+    align-self: center;
+    margin: 0;
+    padding: 0;
+    transition: transform 0.3s ease; /* Add a smooth transition effect */;
+}
+
+.grid-nav:hover {
+    animation: bounce 1s infinite; /* Apply the bounce animation on hover */
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateX(0); /* Start and end position: no translation */
+    }
+    50% {
+        transform: translateX(-10px); /* Midpoint position: translate 10px to the left */
+    }
+}
+
+.goback {
+    width: 200px;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.book img {
+    margin: 0;
+    padding: 0;
+}
+
+.book {
+    grid-area: poison-book;
+    width: auto;
+    height: 600px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Align the content to the left */
+    align-items: center; /* Center content vertically */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.frame{
+    grid-area: frame;
+    width: auto;
+    height: 600px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Align the content to the left */
+    align-items: center; /* Center content vertically */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.shelf {
+    width: 373px;
+    height:15px;
+    background-color: #8B4513;
+    border: 2px solid #ad540b; /* Add a border to the box */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    margin-top: 5px;
+}
+
+
+@media (min-width: 481px) and (max-width: 768px) {
+    /* Add specific tablet styles if needed */
+
+
+.grid-container2 {
+    display: flow-root;
+     justify-content: center;
+     align-items: center;
+     grid-gap: 0%;
+     grid-template-columns: 1fr;
+     grid-template-rows: 1fr;
+
+ }
+
+ .book {
+     width: 350px;
+     height: auto;
+     margin: 0;
+     padding: 0;
+     display: flex;
+     justify-content: center; /* Align the content to the left */
+     align-items: center; /* Center content vertically */
+     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+ }
+
+
+ .frame {
+     width: 350px;
+     height: auto;
+     margin: 0;
+     padding: 0;
+     display: flex;
+     justify-content: center; /* Align the content to the left */
+     align-items: center; /* Center content vertically */
+     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+ }
+ 
+ .shelf {
+     width: 348px;
+     height: 10px;
+     background-color: #8B4513;
+     border: 2px solid #ad540b; /* Add a border to the box */
+     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+     margin-bottom: 5px;
+     margin-top: 2px;
+}
+
+.goback {
+ width: 250px;
+ height: auto;
+ margin: 0;
+ padding: 0;
+}
+
+}
